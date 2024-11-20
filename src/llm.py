@@ -23,7 +23,7 @@ from src.utils import *
 
 class LLMClient:
     def __init__(self, model : str = "gpt-4o", instruction : dict = None, api_key : str = None):
-        api_key = api_key or os.environ["OPENAI_API_KEY"]
+        api_key = "sk-xxx"
         self.llm = ChatOpenAI(model=model, api_key=api_key)
         self.audio_llm = OpenAI(api_key=api_key)
         self.instruction = instruction

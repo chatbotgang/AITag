@@ -6,6 +6,10 @@ import yaml
 with open("./src/instruction.yaml", "r") as f:
     instructions = yaml.safe_load(f)
 llm = LLMClient(instruction=instructions)
+
+##TODO: 
+# 1. merge three endpoints into one
+
 router = APIRouter(
     prefix="/path1",    
     tags=["tag"],

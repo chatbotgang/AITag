@@ -1,5 +1,7 @@
 from router import path1, path2, path3
 from fastapi import FastAPI
+import os
+os.environ['OPENAI_API_KEY'] = "sk-xxx"
 
 app = FastAPI()
 app.include_router(path1.router)
